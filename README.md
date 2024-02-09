@@ -14,18 +14,26 @@ In Top:
 ## End process by <processID>(PID) with:
 - https://github.com/lineality/find_pid_listening_at_port
 
-###  list what processes are listening at port (user your port number below)
+### List what processes are listening at port (user your port number below)
 ```bash
 $ sudo lsof -n -i :8080 | grep LISTEN
-$ kill -9 <PID #####>
+```
+#### Example output: In this example '12345' is the process-ID (PID)
+```
+python3 12345 username    4u  IPv4 645737      0t0  TCP 127.0.0.1:rfe (LISTEN)
 ```
 
-End process by <processID>(PID) with:
+
+## End process by <processID>(PID) with:
 ```bash
 $ kill -9 <processID>(PID)
 ```
 or
 ```bash
 $ kill -SIGKILL <processID>(PID)
+```
+#### For Example:
+```bash
+$ kill -SIGKILL 12345
 ```
 
