@@ -16,7 +16,11 @@ In Top:
 
 ### List what processes are listening at port (user your port number below)
 ```bash
-$ sudo lsof -n -i :8080 | grep LISTEN
+sudo lsof -n -i :8080 | grep LISTEN
+```
+or
+```bash
+sudo lsof -n -i :5555
 ```
 #### Example output: In this example '12345' is the process-ID (PID)
 ```
